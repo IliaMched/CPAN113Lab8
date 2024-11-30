@@ -11,9 +11,15 @@ const student = {
   }
 };
 
+ 
+const studentJSON = JSON.stringify(student);
+console.log("JSON String:", studentJSON);
 
-console.log("Name:", student.name);
-console.log("Age:", student.age);
+const newStudent = JSON.parse(studentJSON);
+console.log("Newly Created Object:", newStudent);
+
+console.log("Are the objects equal?", JSON.stringify(student) === JSON.stringify(newStudent));
 
 
-console.log(student.displayInfo());
+
+
