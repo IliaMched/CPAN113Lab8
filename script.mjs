@@ -1,42 +1,19 @@
-function greet(name) {
-  return "Hello, " + name + ".";
-}
 
-console.log(greet("Ilia"));
-
-function addNumbers(num1, num2) {
-  // return sum here
-return num1+num2;
-
-}
-
-console.log(addNumbers(2,3));
-
-let x = 11;
-console.log("Global x before function:", x);
-
-function changeValue() {
-    let x = 20; 
-    console.log("Local x inside function:", x);
-}
-
-changeValue();
-console.log("Global x after function:", x); 
-
-
-function outerFunction() {
-  let count = 0;
+const student = {
+  name: "Ilia Mchedlishvili",
+  age: 20,
+  enrolled: true,
+  courses: ["Math", "Science", "Art"],
   
-  return function() {
-      count++;
-      console.log("Count:", count);
-  };
-}
 
-const incrementCounting = outerFunction();
+  displayInfo: function() {
+      return `Student Name: ${this.name}, Age: ${this.age}, Enrolled: ${this.enrolled ? 'Yes' : 'No'}`;
+  }
+};
 
-incrementCounting();
-incrementCounting();
-incrementCounting();
-incrementCounting();
-incrementCounting();
+
+console.log("Name:", student.name);
+console.log("Age:", student.age);
+
+
+console.log(student.displayInfo());
