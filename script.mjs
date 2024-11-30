@@ -23,6 +23,18 @@ console.log("First Score:", firstScore);
 console.log("Second Score:", secondScore);
 
 
+const clonedStudent = {
+  ...student,
+  graduationYear: 2025,
+};
+console.log("Cloned Student with new property:", clonedStudent);
+const newCourses = ["History", "Physical Education"];
+const combinedCourses = [...student.courses, ...newCourses];
+console.log("Combined Courses:", combinedCourses);
+
+
+
+
 const studentJSON = JSON.stringify(student);
 console.log("JSON String:", studentJSON);
 
