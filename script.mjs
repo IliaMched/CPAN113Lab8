@@ -37,7 +37,7 @@ console.log("Second Score:", secondScore);
 
 const clonedStudent = {
   ...student,
-  graduationYear: 2025,
+  graduationYear: 2026,
 };
 console.log("Cloned Student with new property:", clonedStudent);
 
