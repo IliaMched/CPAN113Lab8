@@ -8,49 +8,8 @@
     <title>Lab 7</title>
    
 </head>
-<h2>LAB 7</h2>
-<!-- Mouse Events -->
-<section>
-    <h2>Mouse Events</h2>
-    <button id="mouseEventButton">Hover or Not</button>
-    <p id="mouseEventMessage">Hover over the button to see a message.</p>
-  </section>
+<h2>LAB 8</h2>
 
-  <!-- Keyboard Events -->
-  <section>
-    <h2>Keyboard Events</h2>
-    <input type="text" id="keyEventInput" placeholder="Type something here">
-    <p id="keyEventMessage">Press a key to see it displayed here.</p>
-  </section>
-
-  <!-- Form Events -->
-  <section>
-    <h2>Form Events</h2>
-    <form id="eventForm">
-      <label for="formInput">Your Name:</label>
-      <input type="text" id="formInput" name="name" required>
-      <button type="submit">Submit</button>
-    </form>
-    <p id="formMessage">Submit the form to see a message.</p>
-  </section>
-
-  <!-- Focus and Blur Events -->
-  <section>
-    <h2>Focus and Blur Events</h2>
-    <input type="text" id="focusBlurInput" placeholder="Focus or blur this input">
-    <p id="focusBlurMessage">Click into or out of the input to see a message.</p>
-  </section>
-
-  <!-- Event Delegation -->
-  <section>
-    <h2>Event Delegation</h2>
-    <div id="buttonContainer" class="container">
-      <button>Button 1</button>
-      <button>Button 2</button>
-      <button>Button 3</button>
-    </div>
-    <p id="delegationMessage">Click a button in the container to see its content.</p>
-  </section>
 
   
     <footer>
@@ -58,67 +17,8 @@
     </footer>
 </body>
 </html>
-<script>
-    // Mouse Events codee
-    const mouseEventButton = document.getElementById('mouseEventButton');
-    const mouseEventMessage = document.getElementById('mouseEventMessage');
-    
-    mouseEventButton.addEventListener('mouseover', () => {
-      mouseEventMessage.textContent = 'You are hovered over the button!';
-    });
 
-    mouseEventButton.addEventListener('mouseout', () => {
-      mouseEventMessage.textContent = 'You left the button!';
-    });
 
-  // Keyboard Events
-  const keyEventInput = document.getElementById('keyEventInput');
-    const keyEventMessage = document.getElementById('keyEventMessage');
-    
-    keyEventInput.addEventListener('keyup', (event) => {
-      keyEventMessage.textContent = `You pressed: ${event.key}`;
-    });
-
-    // Form Events
-    const eventForm = document.getElementById('eventForm');
-    const formMessage = document.getElementById('formMessage');
-
-    eventForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      formMessage.textContent = 'Form submitted successfully!';
-    });
-
-    // Focus and Blur Events
-    const focusBlurInput = document.getElementById('focusBlurInput');
-    const focusBlurMessage = document.getElementById('focusBlurMessage');
-
-    focusBlurInput.addEventListener('focus', () => {
-      focusBlurMessage.textContent = 'You are typing in the text box!';
-    });
-
-    focusBlurInput.addEventListener('blur', () => {
-      focusBlurMessage.textContent = 'Please click the text box to type!';
-    });
-
-    // Event Delegation
-    const buttonContainer = document.getElementById('buttonContainer');
-    const delegationMessage = document.getElementById('delegationMessage');
-
-    buttonContainer.addEventListener('click', (event) => {
-      if (event.target.tagName === 'BUTTON') {
-        delegationMessage.textContent = `You clicked: ${event.target.textContent}`;
-      }
-    });
-    
-    //leftover code for previous mobile optimizaiton
-    function toggleDetails(id) {
-    const details = document.getElementById(id);
-    if (details.style.display === "none") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
-    }
-}
 
 
 </script>
